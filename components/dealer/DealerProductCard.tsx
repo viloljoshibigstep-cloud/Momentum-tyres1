@@ -44,7 +44,6 @@ export function DealerProductCard({
           alt={product.name}
           fill
           className="object-contain p-3 group-hover:scale-105 transition-transform duration-500"
-          unoptimized
         />
         {stock && (
           <div className="absolute top-3 left-3">
