@@ -14,7 +14,7 @@ import {
   Menu,
   X,
   ChevronRight,
-  Settings,
+  ExternalLink,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { createClient } from "@/lib/supabase/client";
@@ -48,7 +48,7 @@ export function AdminSidebar({ adminName = "Admin" }: AdminSidebarProps) {
     <div className="flex flex-col h-full bg-brand-navy text-white">
       {/* Logo */}
       <div className="p-6 border-b border-white/10">
-        <div className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-2.5">
           <div className="w-7 h-7 bg-brand-orange rounded flex items-center justify-center">
             <span className="text-white font-black text-xs">M</span>
           </div>
@@ -58,14 +58,14 @@ export function AdminSidebar({ adminName = "Admin" }: AdminSidebarProps) {
               Admin Panel
             </div>
           </div>
-        </div>
+        </Link>
       </div>
 
       {/* Admin info */}
       <div className="px-4 py-4 border-b border-white/10">
         <div className="flex items-center gap-3 bg-white/5 rounded-xl p-3">
           <div className="w-8 h-8 rounded-full bg-brand-orange text-white flex items-center justify-center font-bold text-sm">
-            <Settings size={14} />
+            {adminName.charAt(0).toUpperCase()}
           </div>
           <div>
             <p className="text-sm font-semibold text-white">{adminName}</p>
@@ -104,7 +104,7 @@ export function AdminSidebar({ adminName = "Admin" }: AdminSidebarProps) {
           target="_blank"
           className="w-full flex items-center gap-3 px-4 py-3 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
         >
-          <Package size={18} />
+          <ExternalLink size={18} />
           View Public Site
         </Link>
         <button

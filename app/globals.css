@@ -84,7 +84,7 @@
     @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200;
   }
   .admin-sidebar-link.active {
-    @apply bg-brand-navy text-white;
+    @apply bg-white/[0.12] text-white;
   }
   .admin-sidebar-link:not(.active) {
     @apply text-slate-600 hover:bg-slate-200 hover:text-brand-navy;
