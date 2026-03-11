@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/public/HeroSection";
+import { CategoryTicker } from "@/components/public/CategoryTicker";
 import { StatsBar } from "@/components/public/StatsBar";
 import { CategoryGrid } from "@/components/public/CategoryGrid";
 import { PerformanceSection } from "@/components/public/PerformanceSection";
@@ -23,6 +24,7 @@ export default async function HomePage() {
   return (
     <>
       <HeroSection />
+      <CategoryTicker />
       <StatsBar />
       <CategoryGrid categories={categories} />
       <PerformanceSection />
